@@ -1,16 +1,16 @@
 ## Version Tracker
 
-**First attempt**
+**First commit**
 - raw code with unique password given by me
 
-**Second attempt**
+**Second commit**
 - added a second dictionary to save user infos
 - created subroutines for adding new users and login function
 
-**Third attempt**
+**Third commit**
 - fixed bugs in order to save entries for specific users, view and remove the entries of one user
 
-**Fourth attempt**
+**Fourth commit**
 - started working in VSCode instead of Replit
 - created function to verify if username already exists
 - created separate files for a cleaner code:
@@ -22,4 +22,7 @@
 - managed filesave functions in order to properly store data and import it in all files
 - issues to be addressed: list index out of range within view_entry subroutine
 
-*Next challenge: Flask use*
+**Fifth commit**
+- created new branch for Flask implementation
+- created app.py and pages for home, login and user registration
+- installed python-dotenv using pip and created a ".flaskenv" in root directory, but kept getting error while trying to run flask; probably error with virtual environment (?)

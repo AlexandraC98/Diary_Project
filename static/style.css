@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(233, 202, 241);
+  font-family:'Times New Roman', Times, serif;
+}
+
+
+
+h1, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 15px;
+}

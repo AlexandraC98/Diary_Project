@@ -1,0 +1,89 @@
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> App Login </title>
+        <link rel="stylesheet" href="static/style.css">
+
+        <style>
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-family:'Times New Roman', Times, serif;
+             }
+
+            body {
+                display: table;
+            }
+
+            .login_body {
+                height: 100%;
+                width: 100%;
+                background-image: url("https://cdn.pixabay.com/photo/2022/09/15/06/14/pattern-7455773_1280.png");
+                background-attachment: fixed;
+                background-size: cover;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .button {
+                border: none;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(239, 217, 244);
+                color: black; 
+                border: 2px solid #735f89;
+             }
+  
+            .button:hover {
+                background-color: #735f89;
+                color: white;
+            }
+
+            h1 {
+                font-size: 50px;
+             }
+
+            h3 {
+                font-size: 30px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <form action=""> </form>
+
+            <div class="login_body">
+                
+                <h1> Your Diary App </h1>
+                <h3> Login to your account </h3>
+                <p> Username: <input type="text" name="userName" required> </p>
+                <p> Password: <input type="password" name="userPassword" required> </p>
+                <p> <button class="button"> Login </button> </p>
+
+                <p><a href="{{ url_for('register') }}"> Don't have an account? Register here! </a></p>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+
+            </div>
+
+    </body>
+
+</html>

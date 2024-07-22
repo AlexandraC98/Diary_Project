@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Diary App </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    body {
+        display: table;
+    }
+
+    .index_body {
+        height: 100%;
+        width: 100%;
+        background-image: url("https://cdn.pixabay.com/photo/2022/09/15/06/14/pattern-7455773_1280.png");
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .button {
+        border: none;
+        color: whitesmoke;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: rgb(244, 213, 232);
+        color: black; 
+        border: 2px solid #9c5970;
+    }
+  
+    .button1:hover {
+        background-color: #9c5970;
+        color: white;
+    }
+  
+    .button2 {
+        background-color: rgb(244, 213, 232);
+        color: black; 
+        border: 2px solid #806489;
+    }
+  
+    .button2:hover {
+        background-color: #806489;
+        color: white;
+    }
+
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    </style>
+        
+</head>
+
+    <body>
+        
+        <div class="index_body">
+
+            <h1> Welcome to Your Diary App! </h1>
+            <h3> Click to login to your user or to sign up! </h3>
+            <p> <button class="button button1"> Sign Up </button> </p>
+            <p> <button class="button button2"> Login </button> </p>
+
+        </div>
+        
+    </body>
+
+</html>
