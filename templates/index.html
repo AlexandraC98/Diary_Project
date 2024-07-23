@@ -25,12 +25,13 @@
     .index_body {
         height: 100%;
         width: 100%;
-        background-image: url("https://cdn.pixabay.com/photo/2022/09/15/06/14/pattern-7455773_1280.png");
+        background-image: url("https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHJlZCUyMGJsdWV8ZW58MHx8MHx8fDA%3D");
         background-attachment: fixed;
         background-size: cover;
         text-align: center;
         display: table-cell;
         vertical-align: middle;
+        border: 6px double;
     }
 
     .button {
@@ -47,30 +48,35 @@
     }
 
     .button1 {
-        background-color: rgb(244, 213, 232);
+        background-color: rgb(242, 219, 219);
         color: black; 
-        border: 2px solid #9c5970;
+        border: 2px solid #7134ab;
     }
   
     .button1:hover {
-        background-color: #9c5970;
-        color: white;
+        background-color: rgb(242, 219, 219);
+        color: black;
+        border: 5px solid #7134ab;
     }
   
     .button2 {
-        background-color: rgb(244, 213, 232);
+        background-color: rgb(242, 219, 219);
         color: black; 
-        border: 2px solid #806489;
+        border: 2px solid #de7b1f;
     }
   
     .button2:hover {
-        background-color: #806489;
-        color: white;
+        background-color: rgb(242, 219, 219);
+        color: black;
+        border: 5px solid #de7b1f;
     }
 
+    h1, h3 {
+        color: rgb(242, 219, 219);
+    }
 
     h1 {
-        font-size: 50px;
+        font-size: 80px;
     }
 
     h3 {
@@ -82,15 +88,17 @@
 </head>
 
     <body>
+
+        <form action="http://127.0.0.1:5000"> </form>
         
-        <div class="index_body">
+            <div class="index_body">
 
-            <h1> Welcome to Your Diary App! </h1>
-            <h3> Click to login to your user or to sign up! </h3>
-            <p> <button class="button button1"> Sign Up </button> </p>
-            <p> <button class="button button2"> Login </button> </p>
+                <h1> <em> Welcome to Your Diary App! </em> </h1>
+                <h3> <em> Click to login to your user or to sign up! </em> </h3>
+                <p> <button class="button button1"> Sign Up </button> </p>
+                <p> <button class="button button2"> Login </button> </p>
 
-        </div>
+            </div>
         
     </body>
 

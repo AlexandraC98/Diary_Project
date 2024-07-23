@@ -7,9 +7,6 @@ import filesave
 Diary = {}
 Users = filesave.AutoLoad()
 
-def AutoSave():
-  filesave.AutoSave(Diary, Users)
-
 #Exact date and time of my current location, Bucharest
 bucharest_tz = pytz.timezone('Europe/Bucharest')
 
@@ -18,20 +15,22 @@ def printDiary(current_user, Diary):
   if current_user in Diary:
     entries = Diary[current_user]
     sorted_keys = sorted(entries, key=lambda x: x['timestamp'], reverse=True)
-    
+      
   for index, entry in enumerate(sorted_keys):
     local_time = entry['timestamp'].astimezone(bucharest_tz)
     print(f"{index+1}. {local_time.strftime('%Y-%m-%d %H:%M:%S')} \nTitle: {entry['title']} \nEntry: {entry['entry']}")
-    
+      
   print()
 
 
-###Entries
+def AutoSave():
+  filesave.AutoSave(Diary, Users)
 
+###Entries
 #Add entry
 def add_entry(current_user, AutoSave):
   os.system("clear")
-  
+    
   title=input("Title > ").capitalize()
   entry=input("Entry > ").capitalize()
   key=datetime.datetime.now(pytz.utc)
@@ -40,7 +39,7 @@ def add_entry(current_user, AutoSave):
     Diary[current_user] = []
 
   Diary[current_user].append({"title": title, "entry": entry, "timestamp": key})
-  
+    
   print("Entry added.")
   time.sleep(1)
 
@@ -62,7 +61,7 @@ def view_entry(current_user, Diary):
 
   while True:
     os.system("clear")
-    
+      
     local_time=sorted_entries[index]['timestamp'].astimezone(bucharest_tz)
     print(f"{local_time.strftime('%Y-%m-%d %H:%M:%S')}: Title: {sorted_entries[index]['title']}\nEntry: {sorted_entries[index]['entry']}\n")
     time.sleep(1)
