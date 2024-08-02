@@ -8,87 +8,34 @@
         <title> App Register </title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-        <style>
-
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                font-family:'Times New Roman', Times, serif;
-             }
-
-            body {
-                display: table;
-            }
-
-            .register_body {
-                height: 100%;
-                width: 100%;
-                background-image: url("https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHJlZCUyMGJsdWV8ZW58MHx8MHx8fDA%3D");
-                background-attachment: fixed;
-                background-size: cover;
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-                border: 6px double;
-            }
-
-            .button {
-                border: none;
-                padding: 16px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                transition-duration: 0.4s;
-                cursor: pointer;
-                background-color: rgb(242, 219, 219);
-                color: black; 
-                border: 2px solid #7134ab;
-             }
-  
-            .button:hover {
-                background-color: rgb(242, 219, 219);
-                color: black;
-                border: 5px solid #7134ab;
-            }
-
-            h1, h3, p {
-                color: rgb(242, 219, 219);
-            }
-
-            h1 {
-                font-size: 60px;
-             }
-
-            h3 {
-                font-size: 30px;
-            }
-
-        </style>
-
+ 
     </head>
 
     <body>
 
-        <form action="http://127.0.0.1:5000"> </form>
+        <!-- Go back button -->
+        <div class="arr">
 
-            <div class="register_body">
+            <button onclick="window.history.back();" class="go-back-button"> <div> </div>
+            
+        </div>
 
-                    <h1> <em> Your Diary App </em> </h1>
-                    <h3> <em> Register your account </em> </h3>
-                    <p> Username: <input type="text" name="userName" required> </p>
-                    <p> Password: <input type="password" name="userPassword" required> </p>
-                    <p> <button class="button buttonregister"> Register </button> </p>
+        <!-- Username and pass to register new account -->
+        <div class="register_body">
 
-                <p> <a href="{{ url_for('login') }}"> Already have an account? Login here </a> </p>
-                {% for message in get_flashed_messages() %}
-                    <p>{{ message }}</p>
-                {% endfor %}
+            <form method='POST' action="/register">
 
-            </div>
+                <h1> <em> Your Diary App </em> </h1>
+                <h3> <em> Register your account </em> </h3>
+                <p> Username: <input type="text" name="userName" required> </p>
+                <p> Password: <input type="password" name="userPassword" required> </p>
+                <p> <button type="submit" class="buttonregister"> <strong> Register </strong> </button> </p>
+
+            </form>
+
+            <p class="login-prompt"> Already have an account? <a href="/login" class="login-link"> Log in here </a> </p>
+        
+        </div>
 
     </body>
 

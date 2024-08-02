@@ -1,0 +1,43 @@
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Entry</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+
+    <body>
+
+        <!-- Logout button -->
+        <div class="header">
+
+            <a href="{{ url_for('logout') }}" class="logout-button"> Logout </a>
+
+        </div>
+        
+        <!-- Go back button -->
+        <div class="arr">
+
+            <button onclick="window.history.back();" class="go-back-button"> </button>
+
+        </div>
+
+        <!-- Add new entry -->
+
+        <h1 class = "title"> Add New Entry </h1>
+
+        <form action="/addentry" method="post">
+
+            <label for="content"> Content: </label>
+            <input type="text" id="content" name="content" required>
+            <p> <button type="submit"> Submit entry </button> </p>
+
+        </form>
+
+    </body>
+
+</html>

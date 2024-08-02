@@ -1,28 +1,47 @@
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Diary App </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-
-<body>
-
-    <form action="http://127.0.0.1:5000"> </form>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Home </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         
-            <div class="home_body">
+    </head>
 
-                <h1> f"Welcome, {userName}!" </h1>
-                <h3> Click to login to your user or to sign up! </h3>
-                <p> <button class="button button1"> Sign Up </button> </p>
-                <p> <button class="button button2"> Login </button> </p>
+    <body>
 
-            </div>
-</body>
+        <!-- Logout button -->
+        <div class="header">
+
+            <a href="{{ url_for('logout') }}" class="logout-button"> Logout </a>
+
+        </div>
+
+        <!-- Go back button -->
+        <div class="arr">
+
+            <button onclick="window.history.back();" class="go-back-button"> <div> </div>
+            
+        </div>
+
+        <!-- Choose what you want to do in your app -->
+        <div class="content">
+
+            <form method="post" action="/home">
+
+                <h1 class="homeh1"> Journey </h1>
+                <h3 class="homeh3"> What would you like to do today? </h3>
+                <p> <button onclick="location.href('/addentry')"> Add a new entry to your journey </button> </p>
+                <p> <button onclick="location.href('/viewentry')"> View last entries </button> </p>
+                <p> <button onclick="location.href('/removeentry')"> Remove entries </button></p>
+
+            </form>
+ 
+        </div>
+
+    </body>
 
 
 </html>

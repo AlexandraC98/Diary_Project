@@ -25,4 +25,11 @@
 **Fifth commit**
 - created new branch for Flask implementation
 - created app.py and pages for home, login and user registration
-- installed python-dotenv using pip and created a ".flaskenv" in root directory, but kept getting error while trying to run flask; probably error with virtual environment (?)
+- installed python-dotenv using pip and created a ".flaskenv" in root directory
+
+**Sixth commit**
+- deleted unneccessary .py files which were created for the initial project run in terminal
+- created add_entry.html and view_entry.html
+- created sessions for flask app
+- created go back button and logout button for html pages
+- error: "too many redirects to /login" ??
